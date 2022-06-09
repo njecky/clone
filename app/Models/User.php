@@ -51,4 +51,13 @@ class User extends Authenticatable
     public function role(){
         return $this->belongsTo('App\Models\Role');
     }
+    
+    /**
+     *  Permet d'indiquer qu'un utilisateur peut avoir plusieurs Jobs(jobs)
+     *
+     * @return void
+     */
+    public function jobs(){
+        return $this->hasMany('App\Models\job');
+    }
 }
